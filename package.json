@@ -1,0 +1,19 @@
+{
+  "name": "blackedt-client",
+  "version": "1.0.0",
+  "description": "BlackEDT-Client",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BlackTeam",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^40.6.0"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "ws": "^8.19.0"
+  }
+}

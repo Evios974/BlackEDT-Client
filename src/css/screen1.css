@@ -1,0 +1,185 @@
+@import "../css/root.css";
+
+@import "module/loader.css";
+
+@import "../css/module/footer.css";
+
+
+button:disabled{
+    filter: grayscale(100%);
+}
+
+
+
+
+.application{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.tree{
+    flex: 1;
+
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.treeTitleCtn{
+    display: flex;
+    justify-content: center;
+}
+
+.treeTitle{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+
+.treeBtnCtn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.treeBtnCtn > .treeBtnDown.active{
+    background-color: #c5b9e5;
+}
+
+.treeBtnUp, .treeBtnDown{
+    aspect-ratio: 1/1;
+    width: 17.5rem;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    background-color: #fff;
+    box-shadow: 5px 5px 30px 0 #eee;
+    border: none;
+    border-radius: 20px;
+
+    animation: fade 1s forwards;
+}
+
+.treeBtnUp{
+    background-color: #233366;
+    color: #fff;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.treeBtnUp > i, .treeBtnDown > i{
+    font-size: 5em;
+}
+
+.treeBtnUp > i{
+    color: #fff;
+}
+
+.treeBtnDown > i{
+    color: #233366;
+}
+
+.treeBtnUp > span, .treeBtnDown > span{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+
+
+.treeBtnCtn.tbltree{
+    height: 100%;
+
+    display: block;
+
+    background-color: #fff;
+    box-shadow: 5px 5px 30px 0 #eee;
+    border-radius: 20px;
+
+    overflow: auto;
+}
+
+.treeBtnDown.tbltree:nth-child(odd){
+    background-color: #fff;
+}
+
+.treeBtnDown.tbltree:nth-child(even){
+    background-color: #eee;
+}
+
+.treeBtnDown.tbltree.active{
+    background-color: #c5b9e5;
+}
+
+.treeBtnUp.tbltree, .treeBtnDown.tbltree{
+    aspect-ratio: 0;
+    width: 100%;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: unset;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+
+    background-color: #fff;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+
+    animation: fade 1s forwards;
+}
+
+.treeBtnUp.tbltree{
+    position: sticky;
+    top: 0px;
+
+    background-color: #233366;
+    color: #fff;
+
+    z-index: 100;
+}
+
+.treeBtnUp.tbltree > i{
+    color: #fff;
+}
+
+.treeBtnUp.tbltree > i, .treeBtnDown.tbltree > i{
+    font-size: 1.5rem;
+}
+
+.treeBtnUp.tbltree > span, .treeBtnDown.tbltree > span{
+    font-size: 1.5em;
+}

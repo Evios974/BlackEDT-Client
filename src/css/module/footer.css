@@ -1,0 +1,20 @@
+.footer{
+    padding: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    background-color: #000;
+
+    color: #c0c0c0;
+}
+
+.ftr-flex-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
